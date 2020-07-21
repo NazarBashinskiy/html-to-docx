@@ -1,9 +1,8 @@
 /* eslint-disable no-param-reassign */
 import JSZip from 'jszip';
+import { minify } from 'html-minifier';
+import libtidy from 'libtidy-updated';
 import { addFilesToContainer } from './src/html-to-docx';
-
-const { minify } = require('html-minifier');
-const libtidy = require('libtidy-updated');
 
 const minifyHTMLString = (htmlString) => {
   if (typeof htmlString === 'string' || htmlString instanceof String) {
